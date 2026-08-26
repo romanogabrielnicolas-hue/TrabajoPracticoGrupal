@@ -251,3 +251,106 @@ body {
     }
 
 }
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+.formulario {
+    background-color: var(--color-blanco);
+
+    padding: 1.5rem;
+
+    margin-bottom: 2rem;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px #ccc;
+}
+
+.formulario h2 {
+    margin-bottom: 1.5rem;
+
+    color: var(--color-secundario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 0.7rem;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-seccion {
+    margin-bottom: 2rem;
+}
+
+.tabla-seccion h2 {
+    margin-bottom: 1rem;
+
+    color: var(--color-secundario);
+}
+
+.tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: var(--color-blanco);
+}
+
+th,
+td {
+    padding: 0.8rem;
+
+    border: 1px solid #ccc;
+
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-secundario);
+
+    color: var(--color-blanco);
+}
+
+
+/* =========================
+   BOTÓN VOLVER
+========================= */
+
+.boton-volver {
+    display: inline-block;
+
+    background-color: #555;
+
+    width: auto;
+}
