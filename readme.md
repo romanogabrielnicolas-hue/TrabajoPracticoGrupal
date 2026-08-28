@@ -90,9 +90,8 @@ Cada funcionalidad se desarrolla en su propia rama `feature` y posteriormente se
 ## 👥 Integrantes
 
 * **Romano Gabriel**
-* **Romano Sixto**
 * **Dantur Xavier**
-* **Luna Fabricio**
+
 
 ## 📌 Estado del proyecto
 
