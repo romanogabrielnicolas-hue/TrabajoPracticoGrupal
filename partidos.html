@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Partidos - Gestor de Torneos</title>
+
+    <link rel="stylesheet" href="partidos.css">
+</head>
+
+<body>
+
+    
+    <header>
+
+        <div class="logo">
+            Gestor de Torneos de Fútbol
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="equipos.html">Equipos</a>
+            <a href="jugadores.html">Jugadores</a>
+            <a href="partidos.html" class="activo">Partidos</a>
+        </nav>
+
+    </header>
+
+
+   
+    <main>
+
+       
+        <section class="encabezado-pagina">
+
+            <div>
+                <h1>Gestión de Partidos</h1>
+
+                <p>
+                    Consulta y gestiona los partidos correspondientes al torneo.
+                </p>
+            </div>
+
+            <button class="btn-agregar">
+                + Agregar partido
+            </button>
+
+        </section>
+
+
+        
+        <section class="filtros">
+
+            <div class="campo">
+
+                <label for="fecha">
+                    Fecha
+                </label>
+
+                <input
+                    type="date"
+                    id="fecha"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="equipo">
+                    Equipo
+                </label>
+
+                <select id="equipo">
+
+                    <option value="">
+                        Todos los equipos
+                    </option>
+
+                    <option value="river">
+                        River Plate
+                    </option>
+
+                    <option value="boca">
+                        Boca Juniors
+                    </option>
+
+                    <option value="racing">
+                        Racing Club
+                    </option>
+
+                    <option value="independiente">
+                        Independiente
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="estado">
+                    Estado
+                </label>
+
+                <select id="estado">
+
+                    <option value="">
+                        Todos
+                    </option>
+
+                    <option value="pendiente">
+                        Pendiente
+                    </option>
+
+                    <option value="finalizado">
+                        Finalizado
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTADO DE PARTIDOS -->
+        <section class="contenedor-partidos">
+
+            <div class="titulo-tabla">
+
+                <div>
+                    <h2>Partidos registrados</h2>
+
+                    <p>
+                        4 partidos
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- PARTIDO 1 -->
+            <div class="partido">
+
+                <div class="informacion">
+
+                    <span class="fecha">
+                        Fecha 1 · 30/08/2026
+                    </span>
+
+                    <span class="estado finalizado">
+                        Finalizado
+                    </span>
+
+                </div>
+
+
+                <div class="equipos">
+
+                    <div class="equipo local">
+
+                        <div class="escudo">
+                            RP
+                        </div>
+
+                        <strong>
+                            River Plate
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resultado">
+
+                        <span>
+                            3
+                        </span>
+
+                        <b>
+                            -
+                        </b>
+
+                        <span>
+                            1
+                        </span>
+
+                    </div>
+
+
+                    <div class="equipo visitante">
+
+                        <strong>
+                            Boca Juniors
+                        </strong>
+
+                        <div class="escudo">
+                            BJ
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acciones">
+
+                    <button class="btn-editar">
+                        Editar
+                    </button>
+
+                    <button class="btn-eliminar">
+                        Eliminar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PARTIDO 2 -->
+            <div class="partido">
+
+                <div class="informacion">
+
+                    <span class="fecha">
+                        Fecha 1 · 31/08/2026
+                    </span>
+
+                    <span class="estado pendiente">
+                        Pendiente
+                    </span>
+
+                </div>
+
+
+                <div class="equipos">
+
+                    <div class="equipo local">
+
+                        <div class="escudo">
+                            RC
+                        </div>
+
+                        <strong>
+                            Racing Club
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resultado">
+
+                        <span>
+                            -
+                        </span>
+
+                        <b>
+                            -
+                        </b>
+
+                        <span>
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="equipo visitante">
+
+                        <strong>
+                            Independiente
+                        </strong>
+
+                        <div class="escudo">
+                            ID
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acciones">
+
+                    <button class="btn-editar">
+                        Editar
+                    </button>
+
+                    <button class="btn-eliminar">
+                        Eliminar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PARTIDO 3 -->
+            <div class="partido">
+
+                <div class="informacion">
+
+                    <span class="fecha">
+                        Fecha 2 · 05/09/2026
+                    </span>
+
+                    <span class="estado pendiente">
+                        Pendiente
+                    </span>
+
+                </div>
+
+
+                <div class="equipos">
+
+                    <div class="equipo local">
+
+                        <div class="escudo">
+                            BJ
+                        </div>
+
+                        <strong>
+                            Boca Juniors
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resultado">
+
+                        <span>
+                            -
+                        </span>
+
+                        <b>
+                            -
+                        </b>
+
+                        <span>
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="equipo visitante">
+
+                        <strong>
+                            Racing Club
+                        </strong>
+
+                        <div class="escudo">
+                            RC
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acciones">
+
+                    <button class="btn-editar">
+                        Editar
+                    </button>
+
+                    <button class="btn-eliminar">
+                        Eliminar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PARTIDO 4 -->
+            <div class="partido">
+
+                <div class="informacion">
+
+                    <span class="fecha">
+                        Fecha 2 · 06/09/2026
+                    </span>
+
+                    <span class="estado pendiente">
+                        Pendiente
+                    </span>
+
+                </div>
+
+
+                <div class="equipos">
+
+                    <div class="equipo local">
+
+                        <div class="escudo">
+                            RP
+                        </div>
+
+                        <strong>
+                            River Plate
+                        </strong>
+
+                    </div>
+
+
+                    <div class="resultado">
+
+                        <span>
+                            -
+                        </span>
+
+                        <b>
+                            -
+                        </b>
+
+                        <span>
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="equipo visitante">
+
+                        <strong>
+                            Independiente
+                        </strong>
+
+                        <div class="escudo">
+                            ID
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="acciones">
+
+                    <button class="btn-editar">
+                        Editar
+                    </button>
+
+                    <button class="btn-eliminar">
+                        Eliminar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        © 2026 - Gestor de Torneos de Fútbol Murak
+
+    </footer>
+
+</body>
+
+</html>
