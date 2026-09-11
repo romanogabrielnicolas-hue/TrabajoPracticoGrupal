@@ -1,0 +1,392 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+
+
+header {
+    height: 135px;
+    background-color: #126b3a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 38px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.activo {
+    font-weight: bold;
+}
+
+
+
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 70px;
+}
+
+
+
+
+.encabezado-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.encabezado-pagina h1 {
+    color: #075b34;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.encabezado-pagina p {
+    font-size: 16px;
+}
+
+
+
+
+.btn-agregar {
+    background-color: #18874d;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 13px 20px;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-agregar:hover {
+    background-color: #126b3a;
+}
+
+
+
+
+.filtros {
+    background-color: white;
+
+    border: 1px solid #d2d2d2;
+    border-radius: 6px;
+
+    padding: 22px;
+
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    width: 300px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.campo input,
+.campo select {
+    height: 40px;
+
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    background-color: white;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #18874d;
+}
+
+
+
+
+.contenedor-tabla {
+    background-color: white;
+
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
+}
+
+.titulo-tabla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.titulo-tabla h2 {
+    font-size: 20px;
+    color: #075b34;
+}
+
+.titulo-tabla span {
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+th {
+    text-align: left;
+
+    padding: 15px;
+
+    font-size: 14px;
+
+    color: #333;
+
+    border-bottom: 1px solid #d5d5d5;
+}
+
+td {
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #fafafa;
+}
+
+
+
+
+.dorsal {
+    font-weight: bold;
+    color: #126b3a;
+    font-size: 17px;
+}
+
+
+
+
+.jugador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+
+    background-color: #dff1e7;
+    color: #126b3a;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.jugador strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.jugador small {
+    color: #777;
+    font-size: 12px;
+}
+
+
+
+.posicion {
+    padding: 5px 9px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.delantero {
+    background-color: #fff0c7;
+    color: #9a6b00;
+}
+
+.mediocampista {
+    background-color: #dceeff;
+    color: #17609b;
+}
+
+.arquero {
+    background-color: #eadfff;
+    color: #6840a0;
+}
+
+
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.acciones button {
+    border: none;
+
+    padding: 7px 11px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: #18874d;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #126b3a;
+}
+
+.btn-eliminar {
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+.btn-eliminar:hover {
+    background-color: #d0d0d0;
+}
+
+
+
+
+footer {
+    background-color: #0d5933;
+    color: white;
+
+    height: 105px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 35px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .encabezado-pagina {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .campo {
+        width: 100%;
+    }
+}

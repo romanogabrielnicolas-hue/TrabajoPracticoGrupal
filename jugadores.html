@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores - Gestor de Torneos</title>
+    <link rel="stylesheet" href="jugadores.css">
+</head>
+
+<body>
+
+  
+    <header>
+        <div class="logo">
+            Gestor de Torneos de Fútbol
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="equipos.html">Equipos</a>
+            <a href="jugadores.html" class="activo">Jugadores</a>
+            <a href="partidos.html">Partidos</a>
+        </nav>
+    </header>
+
+
+    
+    <main>
+
+        <section class="encabezado-pagina">
+            <div>
+                <h1>Gestión de Jugadores</h1>
+                <p>Administra los jugadores pertenecientes a cada equipo.</p>
+            </div>
+
+            <button class="btn-agregar">
+                + Agregar jugador
+            </button>
+        </section>
+
+
+       
+        <section class="filtros">
+
+            <div class="campo">
+                <label for="buscar">Buscar jugador</label>
+                <input
+                    type="text"
+                    id="buscar"
+                    placeholder="Nombre o apellido..."
+                >
+            </div>
+
+            <div class="campo">
+                <label for="equipo">Equipo</label>
+
+                <select id="equipo">
+                    <option value="">Todos los equipos</option>
+                    <option value="river">River Plate</option>
+                    <option value="boca">Boca Juniors</option>
+                    <option value="racing">Racing Club</option>
+                    <option value="independiente">Independiente</option>
+                </select>
+            </div>
+
+        </section>
+
+
+       
+        <section class="contenedor-tabla">
+
+            <div class="titulo-tabla">
+                <h2>Jugadores registrados</h2>
+                <span>8 jugadores</span>
+            </div>
+
+            <div class="tabla-responsive">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Jugador</th>
+                            <th>Posición</th>
+                            <th>Equipo</th>
+                            <th>Edad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="dorsal">10</td>
+
+                            <td>
+                                <div class="jugador">
+                                    <div class="avatar">JP</div>
+
+                                    <div>
+                                        <strong>Juan Pérez</strong>
+                                        <small>DNI: 45.123.456</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="posicion delantero">
+                                    Delantero
+                                </span>
+                            </td>
+
+                            <td>River Plate</td>
+
+                            <td>23</td>
+
+                            <td>
+                                <div class="acciones">
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+
+                                    <button class="btn-eliminar">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="dorsal">9</td>
+
+                            <td>
+                                <div class="jugador">
+                                    <div class="avatar">MG</div>
+
+                                    <div>
+                                        <strong>Martín Gómez</strong>
+                                        <small>DNI: 44.987.321</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="posicion delantero">
+                                    Delantero
+                                </span>
+                            </td>
+
+                            <td>Boca Juniors</td>
+
+                            <td>25</td>
+
+                            <td>
+                                <div class="acciones">
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+
+                                    <button class="btn-eliminar">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="dorsal">5</td>
+
+                            <td>
+                                <div class="jugador">
+                                    <div class="avatar">LD</div>
+
+                                    <div>
+                                        <strong>Lucas Díaz</strong>
+                                        <small>DNI: 46.321.789</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="posicion mediocampista">
+                                    Mediocampista
+                                </span>
+                            </td>
+
+                            <td>Racing Club</td>
+
+                            <td>21</td>
+
+                            <td>
+                                <div class="acciones">
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+
+                                    <button class="btn-eliminar">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="dorsal">1</td>
+
+                            <td>
+                                <div class="jugador">
+                                    <div class="avatar">FR</div>
+
+                                    <div>
+                                        <strong>Facundo Romero</strong>
+                                        <small>DNI: 43.765.123</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="posicion arquero">
+                                    Arquero
+                                </span>
+                            </td>
+
+                            <td>Independiente</td>
+
+                            <td>27</td>
+
+                            <td>
+                                <div class="acciones">
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+
+                                    <button class="btn-eliminar">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+  
+    <footer>
+        © 2026 - Gestor de Torneos de Fútbol Murak
+    </footer>
+
+</body>
+</html>
