@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #222;
 
@@ -18,20 +18,26 @@ body {
 
 
 header {
-    height: 135px;
+    height: 55px;
 
-    background-color: #126b3a;
+    background-color: #198754;
     color: white;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 30px;
+    padding: 10px 20px;
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+
+header h1 {
+    font-size: 19px;
+    margin-left: 280px
+    
+}
 .logo {
     font-size: 48px;
     font-weight: bold;
@@ -58,7 +64,22 @@ nav a.activo {
     font-weight: bold;
 }
 
+.navbar {
+  max-width: 1200px; 
+  margin: 10px auto;  
+  padding: 10px 20px; 
+  border-radius: 6px;  
+  
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
 
+
+.navbar-brand, .navbar h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 
 main {
@@ -81,7 +102,7 @@ main {
 }
 
 .encabezado-pagina h1 {
-    color: #075b34;
+    color: #198754;
 
     font-size: 30px;
 
@@ -96,7 +117,7 @@ main {
 
 
 .btn-agregar {
-    background-color: #18874d;
+    background-color: #198754;
 
     color: white;
 
@@ -111,7 +132,7 @@ main {
 }
 
 .btn-agregar:hover {
-    background-color: #126b3a;
+    background-color: #198754;
 }
 
 
@@ -172,7 +193,7 @@ main {
 .campo select:focus {
     outline: none;
 
-    border-color: #18874d;
+    border-color: #198754;
 }
 
 
@@ -325,7 +346,7 @@ main {
 
     font-weight: bold;
 
-    border: 2px solid #18874d;
+    border: 2px solid #198754;
 }
 
 
@@ -380,13 +401,13 @@ main {
 }
 
 .btn-editar {
-    background-color: #18874d;
+    background-color: #198754;
 
     color: white;
 }
 
 .btn-editar:hover {
-    background-color: #126b3a;
+    background-color: #198754;
 }
 
 .btn-eliminar {
@@ -403,11 +424,11 @@ main {
 
 
 footer {
-    background-color: #0d5933;
+    background-color: #1a1919;
 
     color: white;
 
-    height: 105px;
+    height: 80px;
 
     display: flex;
 
