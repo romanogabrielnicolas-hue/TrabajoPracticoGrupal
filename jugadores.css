@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #222;
     min-height: 100vh;
@@ -17,19 +17,25 @@ body {
 
 
 header {
-    height: 135px;
-    background-color: #126b3a;
+    height: 55px;
+    background-color: #198754;
     color: white;
+    text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 30px;
+    padding: 10px 20px;
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+header h1 {
+    font-size: 19px;
+    margin-left: 280px
+    
+}
 .logo {
     font-size: 48px;
     font-weight: bold;
@@ -55,6 +61,22 @@ nav a.activo {
 }
 
 
+.navbar {
+  max-width: 1200px; 
+  margin: 10px auto;  
+  padding: 10px 20px; 
+  border-radius: 6px;  
+  
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+
+.navbar-brand, .navbar h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 
 main {
@@ -75,7 +97,7 @@ main {
 }
 
 .encabezado-pagina h1 {
-    color: #075b34;
+    color: #198754;
     font-size: 30px;
     margin-bottom: 8px;
 }
@@ -88,7 +110,7 @@ main {
 
 
 .btn-agregar {
-    background-color: #18874d;
+    background-color: #198754;
     color: white;
 
     border: none;
@@ -101,7 +123,7 @@ main {
 }
 
 .btn-agregar:hover {
-    background-color: #126b3a;
+    background-color: #198754;
 }
 
 
@@ -154,11 +176,8 @@ main {
 .campo input:focus,
 .campo select:focus {
     outline: none;
-    border-color: #18874d;
+    border-color: #198754;
 }
-
-
-
 
 .contenedor-tabla {
     background-color: white;
@@ -183,7 +202,7 @@ main {
 
 .titulo-tabla h2 {
     font-size: 20px;
-    color: #075b34;
+    color: #198754;
 }
 
 .titulo-tabla span {
@@ -236,7 +255,7 @@ tbody tr:hover {
 
 .dorsal {
     font-weight: bold;
-    color: #126b3a;
+    color: #198754;
     font-size: 17px;
 }
 
@@ -254,7 +273,7 @@ tbody tr:hover {
     height: 40px;
 
     background-color: #dff1e7;
-    color: #126b3a;
+    color: #198754;
 
     border-radius: 50%;
 
@@ -322,12 +341,12 @@ tbody tr:hover {
 }
 
 .btn-editar {
-    background-color: #18874d;
+    background-color: #198754;
     color: white;
 }
 
 .btn-editar:hover {
-    background-color: #126b3a;
+    background-color: #198754;
 }
 
 .btn-eliminar {
@@ -343,10 +362,10 @@ tbody tr:hover {
 
 
 footer {
-    background-color: #0d5933;
+    background-color: #1a1919;
     color: white;
 
-    height: 105px;
+    height: 80px;
 
     display: flex;
     justify-content: center;
