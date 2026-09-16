@@ -1,0 +1,1199 @@
+/* =========================================================
+   GESTOR DE TORNEOS DE FÚTBOL
+   CSS GENERAL DEL PROYECTO
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES CSS
+========================================================= */
+
+:root {
+    /* Colores */
+    --color-principal: #176b3a;
+    --color-secundario: #0f5132;
+    --color-verde-claro: #198754;
+    --color-verde-oscuro: #075b34;
+
+    --color-fondo: #f4f4f4;
+    --color-blanco: #ffffff;
+    --color-texto: #222222;
+    --color-gris: #777777;
+    --color-borde: #cccccc;
+
+    /* Estados */
+    --color-finalizado-fondo: #dff1e7;
+    --color-finalizado-texto: #126b3a;
+
+    --color-pendiente-fondo: #fff0c7;
+    --color-pendiente-texto: #9a6b00;
+
+    /* Espaciado */
+    --espacio: 1rem;
+
+    /* Bordes y sombras */
+    --radio: 6px;
+    --sombra: 0 2px 6px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+/*
+   Box Model:
+   border-box hace que el padding y border
+   formen parte del ancho/alto del elemento.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER
+   FLEXBOX
+========================================================= */
+
+.encabezado {
+    min-height: 15vh;
+
+    padding: var(--espacio) 2rem;
+
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Título del sitio */
+
+.encabezado h1 {
+    font-size: 2rem;
+}
+
+
+/* Compatible si alguna página utiliza .logo */
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   FLEXBOX
+========================================================= */
+
+.navegacion {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.navegacion a {
+    color: var(--color-blanco);
+
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 5px;
+
+    font-size: 0.95rem;
+
+    transition: background-color 0.2s ease;
+}
+
+.navegacion a:hover {
+    background-color: var(--color-secundario);
+}
+
+.navegacion a.activo {
+    font-weight: bold;
+}
+
+
+/*
+   Compatibilidad con páginas que todavía
+   utilizan las etiquetas header/nav directamente.
+*/
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    min-height: 15vh;
+
+    box-shadow: var(--sombra);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--color-blanco);
+
+    text-decoration: none;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--color-secundario);
+}
+
+nav a.activo {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.contenido-principal,
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 2.5rem auto 4rem;
+
+    padding: 1rem 0;
+}
+
+
+/* =========================================================
+   BIENVENIDA - INDEX
+========================================================= */
+
+.bienvenida {
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+.bienvenida h2 {
+    color: var(--color-secundario);
+
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+}
+
+.bienvenida p {
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   TARJETAS PRINCIPALES
+   CSS GRID
+========================================================= */
+
+.menu-principal {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.opcion {
+    background-color: var(--color-blanco);
+
+    padding: 1.5rem;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcion:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.opcion h2 {
+    color: var(--color-secundario);
+
+    margin-bottom: 1rem;
+}
+
+.opcion p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   BOTONES PRINCIPALES
+========================================================= */
+
+.boton {
+    display: block;
+
+    padding: 0.8rem;
+
+    color: var(--color-blanco);
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: opacity 0.2s ease;
+}
+
+.boton:hover {
+    opacity: 0.85;
+}
+
+.boton-equipos {
+    background-color: var(--color-principal);
+}
+
+.boton-jugadores {
+    background-color: var(--color-verde-claro);
+}
+
+.boton-partidos {
+    background-color: #d99a00;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE LAS PÁGINAS
+   FLEXBOX
+========================================================= */
+
+.encabezado-pagina {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+.encabezado-pagina h1 {
+    color: var(--color-verde-oscuro);
+
+    font-size: 1.9rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.encabezado-pagina p {
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   BOTÓN AGREGAR
+========================================================= */
+
+.btn-agregar {
+    background-color: var(--color-verde-claro);
+
+    color: var(--color-blanco);
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 0.8rem 1.25rem;
+
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.btn-agregar:hover {
+    background-color: var(--color-principal);
+}
+
+
+/* =========================================================
+   FILTROS
+   FLEXBOX
+========================================================= */
+
+.filtros {
+    background-color: var(--color-blanco);
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: var(--radio);
+
+    padding: 1.4rem;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 1.5rem;
+
+    margin-bottom: 1.5rem;
+
+    box-shadow: var(--sombra);
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.45rem;
+
+    width: 18rem;
+}
+
+.campo label {
+    font-weight: bold;
+
+    font-size: 0.875rem;
+
+    color: #333333;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    min-height: 2.5rem;
+
+    border: 1px solid #c8c8c8;
+
+    border-radius: 4px;
+
+    padding: 0 0.75rem;
+
+    font-size: 0.875rem;
+
+    background-color: var(--color-blanco);
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+
+    border-color: var(--color-verde-claro);
+
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.15);
+}
+
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.formulario {
+    background-color: var(--color-blanco);
+
+    padding: 1.5rem;
+
+    margin-bottom: 2rem;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 8px;
+
+    box-shadow: var(--sombra);
+}
+
+.formulario h2 {
+    margin-bottom: 1.5rem;
+
+    color: var(--color-secundario);
+}
+
+.formulario .campo {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   TABLA GENERAL
+========================================================= */
+
+.tabla-seccion {
+    margin-bottom: 2rem;
+}
+
+.tabla-seccion h2 {
+    margin-bottom: 1rem;
+
+    color: var(--color-secundario);
+}
+
+.tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: var(--color-blanco);
+}
+
+th,
+td {
+    padding: 0.8rem;
+
+    border: 1px solid var(--color-borde);
+
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-secundario);
+
+    color: var(--color-blanco);
+}
+
+
+/* =========================================================
+   SECCIÓN JUGADORES
+========================================================= */
+
+.contenedor-tabla {
+    background-color: var(--color-blanco);
+
+    border: 1px solid #d0d0d0;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+}
+
+.titulo-tabla {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.25rem 1.4rem;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.titulo-tabla h2 {
+    font-size: 1.25rem;
+
+    color: var(--color-verde-oscuro);
+}
+
+.titulo-tabla p,
+.titulo-tabla span {
+    color: var(--color-gris);
+
+    font-size: 0.875rem;
+}
+
+
+.tabla-responsive {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* Encabezado tabla jugadores */
+
+.contenedor-tabla thead {
+    background-color: #f0f0f0;
+}
+
+.contenedor-tabla th {
+    text-align: left;
+
+    padding: 0.95rem;
+
+    font-size: 0.875rem;
+
+    color: #333333;
+
+    background-color: #f0f0f0;
+
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.contenedor-tabla td {
+    padding: 0.875rem;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 0.875rem;
+
+    text-align: left;
+}
+
+.contenedor-tabla tbody tr:hover {
+    background-color: #fafafa;
+}
+
+
+/* Dorsal */
+
+.dorsal {
+    font-weight: bold;
+
+    color: var(--color-principal);
+
+    font-size: 1.05rem;
+}
+
+
+/* Jugador */
+
+.jugador {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    flex-shrink: 0;
+
+    background-color: var(--color-finalizado-fondo);
+
+    color: var(--color-principal);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.jugador strong {
+    display: block;
+
+    margin-bottom: 0.25rem;
+}
+
+.jugador small {
+    color: var(--color-gris);
+
+    font-size: 0.75rem;
+}
+
+
+/* Posiciones */
+
+.posicion {
+    display: inline-block;
+
+    padding: 0.3rem 0.55rem;
+
+    border-radius: 12px;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+}
+
+.delantero {
+    background-color: var(--color-pendiente-fondo);
+
+    color: var(--color-pendiente-texto);
+}
+
+.mediocampista {
+    background-color: #dceeff;
+
+    color: #17609b;
+}
+
+.arquero {
+    background-color: #eadfff;
+
+    color: #6840a0;
+}
+
+
+/* =========================================================
+   PARTIDOS
+========================================================= */
+
+.contenedor-partidos {
+    background-color: var(--color-blanco);
+
+    border: 1px solid #d0d0d0;
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+}
+
+
+/* Partido */
+
+.partido {
+    padding: 1.4rem;
+
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.partido:last-child {
+    border-bottom: none;
+}
+
+
+/* Información */
+
+.informacion {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.fecha {
+    color: #555555;
+
+    font-size: 0.875rem;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ESTADOS DE PARTIDO
+========================================================= */
+
+.estado {
+    display: inline-block;
+
+    padding: 0.375rem 0.75rem;
+
+    border-radius: 15px;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+}
+
+.finalizado {
+    background-color: var(--color-finalizado-fondo);
+
+    color: var(--color-finalizado-texto);
+}
+
+.pendiente {
+    background-color: var(--color-pendiente-fondo);
+
+    color: var(--color-pendiente-texto);
+}
+
+
+/* =========================================================
+   EQUIPOS DEL PARTIDO
+   FLEXBOX
+========================================================= */
+
+.equipos {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2.8rem;
+}
+
+.equipo {
+    width: 15.6rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.9rem;
+}
+
+.equipo.local {
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+.equipo.visitante {
+    justify-content: flex-start;
+
+    text-align: left;
+}
+
+
+/* Escudo */
+
+.escudo {
+    width: 3rem;
+
+    height: 3rem;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--color-finalizado-fondo);
+
+    color: var(--color-principal);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    border: 2px solid var(--color-verde-claro);
+}
+
+
+/* Resultado */
+
+.resultado {
+    min-width: 6.25rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    font-size: 1.6rem;
+
+    font-weight: bold;
+
+    color: var(--color-verde-oscuro);
+}
+
+.resultado b {
+    color: var(--color-gris);
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   ACCIONES
+========================================================= */
+
+.acciones {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    margin-top: 1.25rem;
+}
+
+.acciones button {
+    border: none;
+
+    padding: 0.45rem 0.7rem;
+
+    border-radius: 4px;
+
+    font-size: 0.75rem;
+
+    cursor: pointer;
+}
+
+
+/* Editar */
+
+.btn-editar {
+    background-color: var(--color-verde-claro);
+
+    color: var(--color-blanco);
+}
+
+.btn-editar:hover {
+    background-color: var(--color-principal);
+}
+
+
+/* Eliminar */
+
+.btn-eliminar {
+    background-color: #e5e5e5;
+
+    color: #333333;
+}
+
+.btn-eliminar:hover {
+    background-color: #d0d0d0;
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER
+========================================================= */
+
+.boton-volver {
+    display: inline-block;
+
+    width: auto;
+
+    background-color: #555555;
+
+    color: var(--color-blanco);
+
+    padding: 0.7rem 1rem;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+.boton-volver:hover {
+    background-color: #333333;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.pie-pagina,
+footer {
+    min-height: 12vh;
+
+    background-color: var(--color-secundario);
+
+    color: var(--color-blanco);
+
+    padding: 2rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 0.875rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Header */
+
+    .encabezado,
+    header {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 1.5rem;
+
+        gap: 1.25rem;
+
+        text-align: center;
+    }
+
+    .encabezado h1,
+    header h1,
+    .logo {
+        font-size: 2.2rem;
+    }
+
+
+    /* Navegación */
+
+    .navegacion,
+    nav {
+        gap: 1rem;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Grid */
+
+    .menu-principal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Encabezado páginas */
+
+    .encabezado-pagina {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.25rem;
+    }
+
+
+    /* Filtros */
+
+    .filtros {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+
+    /* Partidos */
+
+    .equipos {
+        gap: 1rem;
+    }
+
+    .equipo {
+        width: auto;
+    }
+
+    .equipo strong {
+        font-size: 0.8rem;
+    }
+
+    .resultado {
+        min-width: 4.5rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .encabezado,
+    header {
+        padding: 1.25rem;
+
+        gap: 1rem;
+    }
+
+    .encabezado h1,
+    header h1,
+    .logo {
+        font-size: 8vw;
+    }
+
+
+    /* Navegación */
+
+    .navegacion,
+    nav {
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+        gap: 0.5rem;
+    }
+
+    .navegacion a,
+    nav a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Contenido */
+
+    .contenido-principal,
+    main {
+        width: 92%;
+
+        margin-top: 1.5rem;
+
+        margin-bottom: 2.5rem;
+    }
+
+
+    /* Grid */
+
+    .menu-principal {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Encabezado */
+
+    .encabezado-pagina h1 {
+        font-size: 1.6rem;
+    }
+
+
+    /* Filtros */
+
+    .filtros {
+        padding: 1rem;
+    }
+
+
+    /* Tabla jugadores */
+
+    .tabla-responsive {
+        overflow-x: auto;
+    }
+
+    .contenedor-tabla table {
+        min-width: 650px;
+    }
+
+
+    /* Partidos */
+
+    .informacion {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .equipos {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+
+        text-align: center;
+    }
+
+    .equipo {
+        width: 100%;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+    }
+
+    .resultado {
+        order: 2;
+
+        min-width: auto;
+    }
+
+    .equipo.local {
+        order: 1;
+    }
+
+    .equipo.visitante {
+        order: 3;
+    }
+
+    .acciones {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+}
