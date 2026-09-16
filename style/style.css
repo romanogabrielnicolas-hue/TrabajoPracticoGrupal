@@ -1,3 +1,8 @@
+/* =========================================================
+   GESTOR DE TORNEOS DE FÚTBOL
+   CSS GENERAL DEL PROYECTO
+========================================================= */
+
 
 /* =========================================================
    VARIABLES CSS
@@ -35,6 +40,12 @@
 /* =========================================================
    CONFIGURACIÓN GENERAL
 ========================================================= */
+
+/*
+   Box Model:
+   border-box hace que el padding y border
+   formen parte del ancho/alto del elemento.
+*/
 
 * {
     box-sizing: border-box;
@@ -132,7 +143,10 @@ body {
 }
 
 
-
+/*
+   Compatibilidad con páginas que todavía
+   utilizan las etiquetas header/nav directamente.
+*/
 
 header {
     background-color: var(--color-principal);
@@ -150,7 +164,7 @@ header {
 }
 
 header h1 {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 nav {
@@ -360,9 +374,6 @@ main {
     background-color: var(--color-principal);
 }
 
-<<<<<<< HEAD
-/* =========================
-=======
 
 /* =========================================================
    FILTROS
@@ -435,7 +446,6 @@ main {
 
 
 /* =========================================================
->>>>>>> origin/feature/jugadores
    FORMULARIOS
 ========================================================= */
 
@@ -920,17 +930,6 @@ th {
     display: inline-block;
 
     width: auto;
-<<<<<<< HEAD
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-=======
 
     background-color: #555555;
 
@@ -1016,30 +1015,10 @@ footer {
 
     /* Grid */
 
->>>>>>> origin/feature/jugadores
     .menu-principal {
         grid-template-columns: repeat(2, 1fr);
     }
 
-<<<<<<< HEAD
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 600px) {
-
-    .encabezado {
-        flex-direction: column;
-
-        padding: 1.5rem;
-    }
-
-    .encabezado h1 {
-        font-size: 8vw;
-=======
 
     /* Encabezado páginas */
 
@@ -1123,19 +1102,10 @@ footer {
     .navegacion a,
     nav a {
         width: 100%;
->>>>>>> origin/feature/jugadores
 
         text-align: center;
     }
 
-<<<<<<< HEAD
-    .navegacion {
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-=======
 
     /* Contenido */
 
@@ -1151,15 +1121,10 @@ footer {
 
     /* Grid */
 
->>>>>>> origin/feature/jugadores
     .menu-principal {
         grid-template-columns: 1fr;
     }
 
-<<<<<<< HEAD
-}
-
-=======
 
     /* Encabezado */
 
@@ -1232,4 +1197,3 @@ footer {
         flex-wrap: wrap;
     }
 }
->>>>>>> origin/feature/jugadores
